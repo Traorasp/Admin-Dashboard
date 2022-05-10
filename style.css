@@ -4,6 +4,8 @@ body {
     font-family: 'Asap', sans-serif;
     display: grid;
     grid-template: 1fr 7fr / 1fr 5fr;
+    padding: 0;
+    margin: 0;
 }
 
 .sidebar {
@@ -13,6 +15,7 @@ body {
     flex-direction: column;
     align-items: center;
     row-gap: 32px;
+    color: white;
 }
 
 .nav ul, .support ul {
@@ -30,8 +33,78 @@ li >  h2 {
 
 .dash-header {
     grid-area:  1/ 2 / 2 / 3;
-
+    display: grid;
+    grid-template: 1fr 1.25fr / 4fr 1fr 1.5fr;
+    padding: 6px 32px;
+    column-gap: 24px;
 }
+
+.searchbar {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.searchbar input{
+    width: max(1fr);
+    height: 1fr;
+    flex: 1;
+}
+
+.notifications, .buttons {
+    place-self: center;
+}
+
+.notifications {
+    grid-area: 1 / 2 / 2 /3;
+}
+
+.profile {
+    grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    justify-content: centers;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.profile h3 {
+    display: inline;
+}
+
+.user-greeting {
+    grid-area: 2 / 1 / 3 / 2;
+    display: grid;
+    grid-template: repeat(2, 1fr) / 0.3fr repeat(2, 1fr);
+}
+
+.profile-pic {
+    grid-area: 1 / 1 / 3 / 2;
+    place-self: center;
+}
+
+.greeting {
+    grid-area: 1 / 2 / 3 / 3;
+}
+
+
+.buttons {
+    grid-area: 2 / 2 / 3 / 4;
+    display: flex;
+    column-gap: 33%;
+    justify-content: space-evenly;
+}
+
+.buttons button {
+    background-color: rgb(146, 0, 190);
+    font-weight: bold;
+    flex: 1 1 auto;
+    padding: 5% 14%;
+    border-radius: 10%;
+    font-size: 1.2vw;
+    color: white;
+}
+
 
 .main-content {
     grid-area:  2 / 2 / 3 / 3;
